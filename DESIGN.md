@@ -1,7 +1,7 @@
 # Navi Design System
 ## AI Financial Wellness for Work — Token Specification v2.0
 
-> **Author:** Naveen Madhav · UX Designer  
+> **Author:** Naveen Sereddy · UX Designer  
 > **Status:** Active · Last updated June 29, 2026  
 > **Scope:** Employee-facing prototype · Enterprise B2B · Embedded + standalone surfaces  
 > **Product:** Navi — embedded AI financial wellness agent (TechCorp Benefits)

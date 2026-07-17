@@ -1,42 +1,64 @@
-# NAVI — AI Financial Wellness Coach
+# NAVI
+
+AI financial wellness benefit for the workplace, embedded in tools employees already use (Slack, Workday, BambooHR) instead of shipping as a separate app. 8-screen web prototype plus a separate mobile prototype at 390px.
 
 **Live case study:** [naveensereddy.com/case-navi](https://naveensereddy.com/case-navi)
 
-A product design case study, 6 weeks, solo, end to end.
+## Features
 
-NAVI is an AI-powered financial wellness benefit built for the workplace — not a standalone app, but something that lives inside the tools employees already use every day: Slack, Workday, BambooHR.
+- Onboarding: connect payroll and accounts, set goals, trust-first AI introduction
+- Dashboard: paycheck card, spending breakdown, proactive AI insights
+- Weekly check-in with accept/override actions on each recommendation
+- Goal tracking with a 13-month savings plan
+- Full explainability panel: confidence score, data sources, and reasoning behind every recommendation
+- Anomaly alerts with three resolution paths
+- A simulated Slack Block Kit view of the embedded experience
+- A privacy screen showing exactly what NAVI accessed, with redaction controls
+
+Every recommendation ships with a confidence score, the data behind it, and an override button. NAVI never acts on its own.
+
+## Tech stack
+
+Both prototypes (`Navi - AI Financial Coach.html`, `Navi - Mobile.html`) run on a custom runtime, `support.js`, generated from a TypeScript source tree (`dc-runtime`) and built with Bun. The runtime wraps React under a custom-element system (`<x-app>`, `<x-import>`) rather than a standard bundler setup, confirmed by the generated-file header in `support.js` itself. There's no `package.json` in this repo; the runtime ships pre-built.
+
+No backend, no database. It's a click-through prototype.
+
+## Project structure
+
+```
+Navi - AI Financial Coach.html   # web prototype, entry point
+Navi - Mobile.html                # mobile prototype (390px)
+support.js                         # generated runtime (dc-runtime, do not edit directly)
+deck-stage.js                       # slide-deck stage component, used by presentation-style sections
+DESIGN.md                            # design token spec: claymorphism rationale, color, type, spacing
+CASE-STUDY.md                         # research, usability results, outcomes
+PORTFOLIO.md                           # shorter portfolio-facing summary
+```
 
 ## Why I built it this way
 
-The idea came out of research. I interviewed 7 HR managers and 12 employees across two mid-sized tech companies, and kept hearing the same thing: companies offer financial wellness programs, but almost nobody uses them. Adoption sat around 3%. Not because employees don't care about money. Because the apps feel like homework — clinical interfaces, banking-terminal aesthetics, a separate download you have to remember to open. The stress the product is supposed to fix gets amplified by the product itself.
+The research came first: 7 HR managers and 12 employees across two mid-sized tech companies, and the same complaint kept coming up. Companies offer financial wellness benefits, but adoption sits around 3%, not because people don't care about money but because the apps feel like homework: clinical interfaces, banking-terminal aesthetics, a separate download to remember to open.
 
-So instead of building another finance app, I redesigned the concept. NAVI doesn't ask employees to change their behavior and open something new. It shows up where they already are, and it explains itself instead of just issuing verdicts — every recommendation carries a confidence score, the data behind it, and an override button. NAVI never acts on its own; the human decides. That was non-negotiable from day one.
+Claymorphism (soft 3D surfaces, warm sky-blue backgrounds, tactile card shadows) was a deliberate response to that, documented in full in `DESIGN.md`. Most fintech tools default to flat, dark, data-dense interfaces that read like audit software, the wrong register for a product built around financial anxiety.
 
-The visual language matters here too. Most fintech tools default to flat, dark, data-dense interfaces that read like audit software — the wrong register for a product built around financial anxiety. I used claymorphism instead: soft 3D surfaces, warm sky-blue backgrounds, tactile card shadows. It communicates safety before the user reads a word, which matters when someone's opening a financial alert on a Tuesday morning. The harder design constraint was Slack's Block Kit: no charts, three buttons max, text only. Every standalone screen got better once I stress-tested it against that embedded format — it forced NAVI to say only what actually mattered.
+The harder constraint was Slack's Block Kit: no charts, three buttons max, text only. Every standalone screen got better once I stress-tested it against that embedded format, since it forced the design to say only what actually mattered.
 
-In an 8-participant usability study (simulated onboarding plus two recommendation flows), average time to act on a recommendation was 38 seconds against a 4.2-minute benchmark. Trust rating came in at 4.4 out of 5, and participants specifically called out trusting the reasoning, not just the output. 7 of 8 said they'd use NAVI if their employer offered it.
+## Usability results
 
-## What's built
+8-participant study, simulated onboarding plus two recommendation flows (full detail in `CASE-STUDY.md`):
 
-8 screens in the standalone web prototype, plus a separate mobile prototype covering the core flows at 390px:
+- Average time to act on a recommendation: 38 seconds, against a 4.2-minute benchmark from comparable finance apps
+- Trust rating: 4.4 / 5
+- 7 of 8 participants said they'd use NAVI if their employer offered it
 
-- Onboarding — payroll connect, goal setting, trust-first AI introduction
-- Dashboard — paycheck card, spending breakdown, proactive AI insights
-- Weekly check-in — NAVI briefing with accept/override actions
-- My goals — progress tracking, 13-month savings plan
-- AI analysis — full explainability panel, confidence scores, data sources
-- Alerts — anomaly detection with three resolution paths
-- Slack embedded view — Block Kit simulation of the in-Slack experience
-- Privacy & data — what NAVI accessed, what it didn't, full redaction controls
+## Getting started
 
-## Run the prototype
+Open `Navi - AI Financial Coach.html` in any modern browser for the web prototype, or `Navi - Mobile.html` for the mobile flow. No install, no build.
 
-Open `Navi - AI Financial Coach.html` in any browser for the full web experience, or `Navi - Mobile.html` for the mobile flow. No dependencies, no install — just open and click through.
+## License
 
-## Tools
-
-Figma, HTML/CSS for the interactive prototype, user interviews.
+MIT
 
 ---
 
-Naveen Sereddy — [naveensereddy.com](https://naveensereddy.com) · [github.com/Naveen-Sereddy](https://github.com/Naveen-Sereddy)
+Naveen Sereddy · [naveensereddy.com](https://naveensereddy.com) · [github.com/Naveen-Sereddy](https://github.com/Naveen-Sereddy)

@@ -61,7 +61,7 @@ Every recommendation has an Override button. NAVI never acts; it proposes and wa
 
 ### 4. 13-month plan, not 12
 
-When NAVI builds a savings plan, it recommends 13 months over the aspirational 12. Behavioral research shows that plans built to a calendar year have higher dropout rates because they feel like New Year's resolutions. A 13-month plan is slightly counterintuitive, which makes it memorable — and its odd framing signals that the AI is computing an actual timeline, not rounding.
+When NAVI builds a savings plan, it recommends 13 months over the aspirational 12. My hypothesis: a clean 12-month plan reads like a New Year's resolution, and resolutions have a reputation for not sticking. A 13-month plan is slightly counterintuitive, which makes it memorable — and its odd framing signals that the AI is computing an actual timeline, not rounding. This is a design bet, not a validated finding: I haven't run a study on dropout rates, only observed that people do notice the odd number.
 
 ### 5. Confidence scores everywhere
 

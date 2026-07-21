@@ -43,7 +43,7 @@ The gap isn't the benefit — it's the surface. People don't open new apps. NAVI
 
 **Transparency architecture** — every screen surfaces what data NAVI accessed and what it did not. Privacy is a first-class feature, not a settings afterthought.
 
-**13-month plan** — behavioral UX detail: NAVI recommends 13-month savings plans rather than 12-month to avoid the dropout pattern associated with calendar-year goals.
+**13-month plan** — behavioral UX bet, not a validated finding: NAVI recommends 13-month savings plans rather than 12-month on the hypothesis that a clean calendar year reads like a New Year's resolution. Untested claim; what's actually observed is that people notice the odd number.
 
 **Embedded-first constraint** — Slack's Block Kit format (3 buttons max, no charts, text-first) was used as a design pressure valve. Every feature that couldn't survive the embedded constraint was cut or simplified.
 
@@ -73,5 +73,5 @@ The gap isn't the benefit — it's the surface. People don't open new apps. NAVI
 - Why claymorphism? Anxiety reduction through tactile form — the aesthetic does emotional work before the content loads.
 - Why NAVI ANALYSIS, not chat bubbles? Enterprise systems need to feel like systems. Chat bubbles signal toy; structured cards signal authority.
 - Why override on every card? Financial anxiety peaks when control is removed. The override button is a design promise: the human is always in charge.
-- Why 13 months? Behavioral UX. Odd-number timelines resist the "New Year's resolution" dropout pattern.
+- Why 13 months? A design hypothesis, not research I've validated: a clean 12 reads like a resolution. If pushed on evidence, the honest answer is "untested bet, based on the odd number getting noticed in testing."
 - Why Slack-first? The discovery: people don't open finance apps. They open Slack. Meeting users where attention already lives is the product strategy.

@@ -19,7 +19,7 @@ Most enterprise financial tools default to flat, clinical interfaces — dark ba
 Claymorphism — soft 3D surfaces, warm off-white backgrounds, dome shadows that make UI feel tactile and approachable — solves this directly.
 
 **The "best friend who happens to know finance" argument:**  
-When you imagine getting financial advice from a trusted friend, you don't imagine a Bloomberg terminal. You imagine a warm conversation, maybe over coffee. The claymorphism treatment creates that subconscious register. The surfaces feel soft, rounded, held. The gold accent reads warm, not alarming. The typography (Nunito) is friendly without being juvenile.
+When you imagine getting financial advice from a trusted friend, you don't imagine a Bloomberg terminal. You imagine a warm conversation, maybe over coffee. The claymorphism treatment creates that subconscious register. The surfaces feel soft, rounded, held. The muted sky-blue accent reads calm, not alarming. The typography (Nunito) is friendly without being juvenile.
 
 **Why this matters for employee adoption:**  
 Financial stress products fail at activation. Employees enroll in benefits they never use because the interface makes the anxiety worse, not better. Every pixel of a financial wellness tool is a trust signal. Claymorphism externalizes trust through tactile, warm, approachable form — before the AI says a word.
@@ -27,8 +27,8 @@ Financial stress products fail at activation. Employees enroll in benefits they 
 **Behavioral design rationale:**  
 - Rounded corners (20px+) signal safety, not urgency
 - Multi-layer soft shadows create dimensionality without aggression
-- Off-white warm background (#EAE6DF) reads like paper, not a screen
-- Gold accent (#B8870A) is amber-toned, not flashy — signals attention without alarm
+- Soft sky-blue background (#DFF0FF) with white clay surfaces reads calm, not clinical
+- Blue accent (#3078C0) is muted, not flashy — signals attention without alarm
 - Inset (recessed) elements signal "settled" state — the plan is set, the data is stable
 
 ### Shadow Formula
@@ -70,25 +70,24 @@ box-shadow:
 | `color.border` | `#BDD8F5` | All borders, dividers |
 | `color.text.1` | `#0D2137` | Primary text, headings (deep navy) |
 | `color.text.2` | `#3D5E7A` | Secondary text, descriptions |
-| `color.text.3` | `#7A9BB5` | Muted text, timestamps |
+| `color.text.3` | `#556C7E` | Muted text, timestamps |
 
 ### 1.2 Semantic Colors
 
 | Token | Value | Usage rule |
 |-------|-------|------------|
-| `color.blue` | `#3D96F0` | CTAs, AI active states, primary accent. Signal use only. |
-| `color.blue.bg` | `rgba(61,150,240,0.08)` | Blue-tinted card backgrounds |
-| `color.emerald` | `#22A55A` | Success, money up, goal milestones, high confidence |
-| `color.amber` | `#D97706` | Medium confidence, caution |
-| `color.red` | `#DC4545` | Errors, anomalies, spending overages |
+| `color.blue` | `#3078C0` | CTAs, AI active states, primary accent. Signal use only. |
+| `color.blue.bg` | `rgba(48,120,192,0.08)` | Blue-tinted card backgrounds |
+| `color.emerald` | `#1B8448` | Success, money up, goal milestones, high confidence |
+| `color.amber` | `#AD5F04` | Medium confidence, caution |
+| `color.red` | `#C63E3E` | Errors, anomalies, spending overages |
 
 ### 1.3 Anti-patterns
 
 - Purple of any shade
 - Warm brown or gold as primary — previous palette, retired
-- Heavy dark backgrounds on main screens — NAVI is light and airy
-- Saturated neon blue — use muted sky blue (#3D96F0) only
-- Heavy dark backgrounds on main screens — Navi is warm, not moody
+- Heavy dark backgrounds on main screens — Navi is light, warm, and airy, not moody
+- Saturated neon blue — use muted sky blue (#3078C0) only
 
 ---
 
@@ -103,7 +102,7 @@ box-shadow:
 
 **Why Nunito:** Rounded letterforms that reinforce the claymorphism aesthetic. Warm and readable. Professional enough for enterprise, approachable enough for anxious employees.
 
-**Why DM Mono:** Clean and tabular for financial data. Distinguishable from the display font at small sizes. Paired gold accent numbers read as precise and trustworthy.
+**Why DM Mono:** Clean and tabular for financial data. Distinguishable from the display font at small sizes. Paired with the blue accent, numbers read as precise and trustworthy.
 
 ### 2.2 Scale
 
@@ -157,7 +156,7 @@ box-shadow:
 | State | Visual treatment |
 |-------|-----------------|
 | **Default** | `color.surface` bg · primary clay shadow |
-| **Active / Selected** | `color.gold.bg` bg · gold border · gold text · nav inset shadow |
+| **Active / Selected** | `color.blue.bg` bg · blue border · blue text · nav inset shadow |
 | **Recessed / Settled** | `color.surface.inner` bg · inset shadow |
 | **Alert / Warning** | `color.red.bg` · red border |
 | **Success** | `color.emerald.bg` · emerald border |
@@ -185,7 +184,7 @@ transition: background 200ms ease-out, border-color 200ms ease-out, box-shadow 2
 │ Confidence: ▓▓▓▓▓▓▓▓▓░ 87%             │  ← emerald bar
 │ Source: TechCorp Payroll · Chase        │
 ├─────────────────────────────────────────┤
-│ [Accept]  [⊘ Override]  [Ask why ↗]    │  ← gold CTA, muted override
+│ [Accept]  [⊘ Override]  [Ask why ↗]    │  ← blue CTA, muted override
 └─────────────────────────────────────────┘
 ```
 
@@ -226,7 +225,7 @@ Slides from right (400px wide). Five required sections:
 | **Proactive** | Payroll event, anomaly, calendar-aware | Toast, Slack DM, Check-in |
 | **Reactive** | User question | AI Analysis screen |
 
-Proactive messages carry `PROACTIVE` badge in gold. Never framed as alerts — framed as briefings.
+Proactive messages carry `PROACTIVE` badge in blue. Never framed as alerts — framed as briefings.
 
 ---
 
@@ -238,8 +237,8 @@ When Navi renders inside Slack:
 - Sidebar: `#3F0E40` (Aubergine — Slack's default workspace theme, stays dark purple even in light mode)
 - Sidebar inactive text: `#CFC3CF` · active item bg: `rgba(255,255,255,0.2)` · active text: `#FFFFFF`
 - Main DM area: `#FFFFFF` · text: `#1D1C1D` · secondary: `#616061` · dividers: `#E8E8E8`
-- Block Kit card bg: `#F8F8F8` · border-left accent: `#3D96F0`
-- Action buttons: primary `#3D96F0` fill; secondary white bg + `rgba(29,28,29,0.24)` border
+- Block Kit card bg: `#F8F8F8` · border-left accent: `#3078C0`
+- Action buttons: primary `#3078C0` fill; secondary white bg + `rgba(29,28,29,0.24)` border
 - Input: white bg, `rgba(29,28,29,0.28)` border, `#868686` placeholder
 - Outer context banner and constraint footer use clay treatment on `#FFFFFF` / `#BDD8F5`
 - Block Kit format: max 3 buttons per message
@@ -293,7 +292,7 @@ Full claymorphism treatment. All 8 screens available.
 **Key design decisions to defend:**
 
 1. Claymorphism (not flat or dark) — anxiety reduction through tactile warmth
-2. Amber-gold primary (not blue) — warm intelligence vs. cold corporate
+2. Muted sky-blue primary, not saturated corporate blue — calm intelligence vs. cold clinical
 3. "NAVI ANALYSIS" labels (not chat bubbles) — enterprise system feel, not a toy
 4. Confidence scores on every recommendation — transparent AI
 5. Human override on every card — control, not dependency
@@ -309,7 +308,7 @@ Full claymorphism treatment. All 8 screens available.
 | Requirement | Implementation |
 |------------|----------------|
 | Color contrast | WCAG AA minimum (4.5:1 body, 3:1 large text) |
-| Focus indicators | Gold 2px outline |
+| Focus indicators | Blue 2px outline |
 | Touch targets | Minimum 44×44px |
 | Keyboard navigation | All flows completable keyboard-only |
 | Screen reader | All AI suggestions have text alternatives |
